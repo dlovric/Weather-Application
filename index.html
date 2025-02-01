@@ -5,27 +5,35 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title> Days of the week </title>
         <style>
+            body {
+                margin: 0;
+                height: 100vh; /* Full screen height */
+                display: flex;
+                justify-content: center;
+                align-items: center; /* Centers everything vertically */
+                background-color: #f0f0f0; /* Light background color */
+            }
             .container {
                 display: flex; /* This will align the boxes horizontally */
+                flex-direction: column; /* Align the boxes vertically */
                 justify-content: space-between; /* This ensures the boxes are spaced equally */
-                width: 80%; /* Adjusts the width of the container */
-                margin: 0 auto; /* Centers the container */
+                height: 90%; /* Take up most of the screen height */
+                width: 80%; /* Take up most of the screen width */
             }
             .box {
-                width: 100px; /* Each box has a fixed width */
-                height: 100px; /* Fixed height */
                 background-color: #4CAF50; /* A nice green color */
-                display: flex;
-                align-items: center; /* Centers the text vertically */
-                justify-content: center; /* Centers the text horizontally */
                 color: white;
                 font-weight: bold;
                 border-radius: 8px; /* Rounds the corners of the boxes */
+                text-align: center;
+                line-height: 150px; /* Vertically centers text */
+                height: 150px; /* Makes them tall rectangles */
+                font-size: 24px; /* Increases font size */
             }
         </style>
     </head>
     <body>
-        <div class="container">Weather Separation
+        <div class="container">
             <div class="box">Monday</div>
             <div class="box">Tuesday</div>
             <div class="box">Wednesday</div>
