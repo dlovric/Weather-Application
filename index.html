@@ -19,6 +19,7 @@
                 justify-content: center;  /* Center the boxes horizontally */
                 align-items: center;      /* Center the boxes vertically */
                 width: 100%;              /* Full width of the screen */
+                max-width: 1400px;        /* Optional: limit width */
             }
 
             .box {
@@ -32,6 +33,16 @@
                 font-weight: bold;
                 border-radius: 8px; /* Rounded corners */
                 margin: 10px;        /* Adds spacing between boxes */
+            }
+
+            /* Make sure the first 4 boxes appear in the first row */
+            .container > .box:nth-child(-n+4) {
+                flex: 0 0 300px; /* Ensure the first 4 boxes have a width of 300px */
+            }
+
+            /* The last 3 boxes will be in the second row */
+            .container > .box:nth-child(n+5) {
+                flex: 0 0 300px; /* Ensure the remaining 3 boxes have a width of 300px */
             }
         </style>
     </head>
