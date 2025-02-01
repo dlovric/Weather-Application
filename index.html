@@ -14,21 +14,23 @@
                 background-color: #f0f0f0; /* Light background color */
             }
             .container {
-                display: flex; /* This will align the boxes horizontally */
-                flex-direction: column; /* Align the boxes vertically */
-                justify-content: space-between; /* This ensures the boxes are spaced equally */
-                height: 90%; /* Take up most of the screen height */
-                width: 80%; /* Take up most of the screen width */
+                display: flex;         /* Ensures the child elements (boxes) are aligned horizontally */
+                justify-content: center;  /* Optional: centers the boxes horizontally in the container */
+                align-items: center;      /* Optional: vertically centers the boxes */
+                width: 100%;            /* Makes sure the container takes up the full width of the screen */
             }
+
             .box {
-                background-color: #4CAF50; /* A nice green color */
+                width: 100px;      /* Set a fixed width for the boxes */
+                height: 100px;     /* Set a fixed height for the boxes */
+                background-color: #4CAF50;  /* Green background color */
+                display: flex;
+                align-items: center;  /* Vertically centers text inside each box */
+                justify-content: center; /* Horizontally centers text inside each box */
                 color: white;
                 font-weight: bold;
-                border-radius: 8px; /* Rounds the corners of the boxes */
-                text-align: center;
-                line-height: 150px; /* Vertically centers text */
-                height: 150px; /* Makes them tall rectangles */
-                font-size: 24px; /* Increases font size */
+                border-radius: 8px; /* Rounded corners */
+                margin: 10px;        /* Optional: adds spacing between boxes */
             }
         </style>
     </head>
