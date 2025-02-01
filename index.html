@@ -11,7 +11,6 @@
                 display: flex;
                 justify-content: center;
                 align-items: center; /* Centers everything vertically */
-                /*background-color: #f0f0f0; /* Light background color */
                 background-image: url(https://hlagroup.com/portals/0/images/gallery_collection_image/The_Village_Green//images/image/HLA-photos-village-green-02.jpg);
                 background-size: cover; /* Ensures the image covers the entire page */
                 background-position: center; /* Centers the image */
@@ -29,11 +28,11 @@
             .box {
                 width: 400px;      /* Set a fixed width for the boxes */
                 height: 400px;     /* Set a fixed height for the boxes */
-                background-color: #ADD8E6;  /* Green background color */
+                background-color: #ADD8E6;  /* Light blue background color */
                 display: flex;
                 flex-direction: column;  /* Aligns the items in a column */
-                align-items: center;  /* Vertically centers text inside each box */
-                justify-content: flex-start; /* Horizontally centers text inside each box */
+                align-items: center;  /* Horizontally centers text inside each box */
+                justify-content: flex-start; /* Aligns text near the top */
                 color: black;
                 font-weight: bold;
                 border-radius: 8px; /* Rounded corners */
@@ -41,14 +40,22 @@
                 padding-top: 15px; /* Adds some space from the top */
             }
 
-            /* Make sure the first 4 boxes appear in the first row */
+            /* First 4 boxes should take up the full row */
             .container > .box:nth-child(-n+4) {
-                flex: 0 0 400px; /* Ensure the first 4 boxes have a width of 300px */
+                flex: 0 0 400px; /* Ensures the first 4 boxes have a width of 400px */
             }
 
-            /* The last 3 boxes will be in the second row */
+            /* The remaining 3 boxes should take up the second row */
             .container > .box:nth-child(n+5) {
-                flex: 0 0 400px; /* Ensure the remaining 3 boxes have a width of 300px */
+                flex: 0 0 400px; /* Ensures the remaining 3 boxes have a width of 400px */
+            }
+
+            /* Adjusting container to better fit items */
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start; /* Align boxes to the top of the container */
             }
         </style>
     </head>
